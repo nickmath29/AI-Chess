@@ -1,0 +1,5 @@
+Before we can start coding our projrect, it is important to create a class diagram.
+A class diagram will help us understand what files and pieces of code interact and depend on one another.
+
+const.py:
+"//" The double slashes were used to enforce the division returned an integer
