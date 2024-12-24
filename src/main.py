@@ -24,7 +24,9 @@ class Main:
         dragger = self.game.dragger
         
         while True:
-            game.show_bg(screen) #Creating the board
+            #Creating the board
+            game.show_bg(screen) 
+            game.show_moves(screen)
             game.show_pieces(screen)
             
             if dragger.dragging:
@@ -40,8 +42,13 @@ class Main:
                     
                     if board.squares[clicked_row][clicked_col].has_piece():
                         piece = board.squares[clicked_row][clicked_col].piece
+                        board.calc_move(piece, clicked_row, clicked_col)
                         dragger.save_initial(event.pos)
                         dragger.drag_piece(piece)
+                        # show methods
+                        game.show_bg(screen)
+                        game.show_moves(screen)
+                        game.show_pieces(screen)
                         
                 #Motion
                 elif event.type == pygame.MOUSEMOTION:
@@ -49,7 +56,9 @@ class Main:
                         dragger.update_mouse(event.pos)
                         # We want to update the mouse since 
                         # the blit depends on the mouse
+                        # show methods
                         game.show_bg(screen)
+                        game.show_moves(screen)
                         game.show_pieces(screen)
                         dragger.update_blit(screen)
                 
