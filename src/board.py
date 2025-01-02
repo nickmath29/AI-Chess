@@ -116,7 +116,7 @@ class Board:
                         # create a new move
                         move = Move(initial, final)
 
-                        # check potencial checks
+                        # check potential checks
                         if bool:
                             if not self.in_check(piece, move):
                                 # append new move
@@ -302,6 +302,7 @@ class Board:
                         # create squares of the new move
                         initial = Square(row, col)
                         final = Square(possible_move_row, possible_move_col) # piece=piece
+                        p = self.squares[possible_move_row][possible_move_col].piece
                         # create new move
                         move = Move(initial, final)
                         # check potencial checks
