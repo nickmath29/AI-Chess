@@ -1,2 +1,5 @@
 # AI-Chess
-Creating a Python program for the game chess. There is an AI version and a Player vs Player version. I Implemented an algorithm that allows the AI to determine what the best move will be based on the User's moves.
+## Creating a Python program for the game chess. 
+
+* There will be an AI version and a Player vs Player version. 
+* AI mode currently in progress
